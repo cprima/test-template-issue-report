@@ -3,12 +3,13 @@ description: Report test results after running the WatchfulAnvil installer
 title: "[Test Report]: "
 labels: [test-report]
 body:
-  - type: input
-    id: installer_used
-    attributes:
-      label: Installer used
-      placeholder: Setup_WatchfulAnvil.WorkflowAnalyzerRules_<version>-User/Admin.exe
+- type: input
+  id: installer_used
+  attributes:
+    label: Installer used
+    placeholder: Setup_WatchfulAnvil.WorkflowAnalyzerRules_<version>-User/Admin.exe
     required: true
+
 
   - type: input
     id: os
