@@ -26,7 +26,7 @@ body:
     attributes:
       label: Studio install mode
       options: [User, System]
-  required: true
+    required: true
 
   - type: dropdown
     id: installer_mode
