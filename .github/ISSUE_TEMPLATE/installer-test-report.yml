@@ -8,22 +8,24 @@ body:
     attributes:
       label: Installer used
       placeholder: Setup_WatchfulAnvil.WorkflowAnalyzerRules_<version>-User/Admin.exe
+    validations:
       required: true
-
 
   - type: input
     id: os
     attributes:
       label: Windows version
       placeholder: e.g., 11 Pro, 10 Enterprise
-    required: true
+    validations:
+      required: true
 
   - type: input
     id: studio_version
     attributes:
       label: UiPath Studio version
       placeholder: e.g., 2024.10.x
-    required: true
+    validations:
+      required: true
 
   - type: dropdown
     id: studio_mode
@@ -33,6 +35,8 @@ body:
         - "-- Select one --"
         - User
         - System
+    validations:
+      required: true
 
   - type: dropdown
     id: installer_mode
@@ -42,6 +46,8 @@ body:
         - "-- Select one --"
         - As Admin
         - As Normal User
+    validations:
+      required: true
 
   - type: textarea
     id: target_folders
@@ -51,7 +57,8 @@ body:
         | Folder | DLL Deployed | Write Succeeded |
         |--------|---------------|-----------------|
         | C:\... | net8.0        | ✅ / ❌          |
-    required: true
+    validations:
+      required: true
 
   - type: checkboxes
     id: behavior
