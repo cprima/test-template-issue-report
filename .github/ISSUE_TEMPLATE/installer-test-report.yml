@@ -1,0 +1,59 @@
+name: Installer Test Report
+description: Report test results after running the WatchfulAnvil installer
+title: "[Test Report]: "
+labels: [test-report]
+body:
+  - type: input
+    id: installer_used
+    attributes:
+      label: Installer used
+      placeholder: Setup_WatchfulAnvil.WorkflowAnalyzerRules_<version>-User/Admin.exe
+
+  - type: input
+    id: os
+    attributes:
+      label: Windows version
+      placeholder: e.g., 11 Pro, 10 Enterprise
+
+  - type: input
+    id: studio_version
+    attributes:
+      label: UiPath Studio version
+      placeholder: e.g., 2024.10.x
+
+  - type: dropdown
+    id: studio_mode
+    attributes:
+      label: Studio install mode
+      options: [User, System]
+
+  - type: dropdown
+    id: installer_mode
+    attributes:
+      label: Installer run mode
+      options: [As Admin, As Normal User]
+
+  - type: textarea
+    id: target_folders
+    attributes:
+      label: Detected Target Folders and DLLs
+      placeholder: |
+        | Folder | DLL Deployed | Write Succeeded |
+        |--------|---------------|-----------------|
+        | C:\... | net8.0        | ✅ / ❌          |
+
+  - type: checkboxes
+    id: behavior
+    attributes:
+      label: Behavior Summary
+      options:
+        - label: Installer skipped folders requiring elevation (when run as user)
+        - label: Installer picked fallback when nothing detected
+        - label: Manual folder selection worked
+        - label: Silent install respected logic
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes & Surprises
+      placeholder: Unexpected behavior, comments, or observations
