@@ -32,7 +32,6 @@ body:
     attributes:
       label: Studio install mode
       options:
-        - "-- Select one --"
         - User
         - System
     validations:
@@ -43,7 +42,6 @@ body:
     attributes:
       label: Installer run mode
       options:
-        - "-- Select one --"
         - As Admin
         - As Normal User
     validations:
